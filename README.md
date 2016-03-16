@@ -16,6 +16,19 @@ If you are interested in an earlier release of Revit, pleae grab the most appror
 
 
 
+## Author
+
+Implemented by Jim Awe and the Revit API developement team at Autodesk.
+
+Maintained by Jeremy Tammik,
+[The Building Coder](http://thebuildingcoder.typepad.com) and
+[The 3D Web Coder](http://the3dwebcoder.typepad.com),
+[ADN](http://www.autodesk.com/adn)
+[Open](http://www.autodesk.com/adnopen),
+[Autodesk Inc.](http://www.autodesk.com)
+
+
+
 ## License
 
 This sample is licensed under the terms of the [MIT License](http://opensource.org/licenses/MIT). Please see the [LICENSE](LICENSE) file for full details.
