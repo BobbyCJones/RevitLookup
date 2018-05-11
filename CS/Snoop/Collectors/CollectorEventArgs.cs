@@ -1,6 +1,6 @@
 #region Header
 //
-// Copyright 2003-2015 by Autodesk, Inc. 
+// Copyright 2003-2018 by Autodesk, Inc. 
 //
 // Permission to use, copy, modify, and distribute this software in
 // object code form for any purpose and without fee is hereby granted, 
@@ -23,21 +23,19 @@
 #endregion // Header
 
 using System;
+using System.Collections.Generic;
 
 namespace RevitLookup.Snoop.Collectors
 {
-	/// <summary>
-	/// Simple class to package up EventArgs for any Snoop Collector Extensions.
-	/// </summary>
-	
 	public class CollectorEventArgs : System.EventArgs
 	{
 	    private object  m_objToSnoop;
+        private List<Type> seenTypes;
 	    
-		public
-		CollectorEventArgs(object objToSnoop)
+		public CollectorEventArgs(object objToSnoop)
 		{
 		    m_objToSnoop = objToSnoop;
+            seenTypes = new List<Type>();
 		}
 		
 		public object ObjToSnoop

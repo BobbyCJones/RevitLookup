@@ -1,6 +1,6 @@
 #region Header
 //
-// Copyright 2003-2015 by Autodesk, Inc. 
+// Copyright 2003-2018 by Autodesk, Inc. 
 //
 // Permission to use, copy, modify, and distribute this software in
 // object code form for any purpose and without fee is hereby granted, 
@@ -127,10 +127,6 @@ FindSymbolNode( ElementType sym )
     private ElementType
     GetSymbolRef( Element elem )
     {
-      WallFoundation contFoot = elem as WallFoundation;
-      if( contFoot != null )
-        return contFoot.GetFoundationType();
-
       FamilyInstance famInst = elem as FamilyInstance;
       if( famInst != null )
         return famInst.Symbol;

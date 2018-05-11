@@ -1,6 +1,6 @@
 #region Header
 //
-// Copyright 2003-2015 by Autodesk, Inc. 
+// Copyright 2003-2018 by Autodesk, Inc. 
 //
 // Permission to use, copy, modify, and distribute this software in
 // object code form for any purpose and without fee is hereby granted,
@@ -33,7 +33,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration( "" )]
 [assembly: AssemblyCompany( "Autodesk Inc." )]
 [assembly: AssemblyProduct( "RevitLookup" )]
-[assembly: AssemblyCopyright( "Copyright 2003-2015 (C) Autodesk Inc." )]
+[assembly: AssemblyCopyright( "Copyright 2003-2018 (C) Autodesk Inc." )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 
@@ -98,6 +98,41 @@ using System.Runtime.CompilerServices;
 // 2015-05-21 - 2016.0.0.9 - display all the display names of the BuiltInParameter enumeration value
 // 2015-09-01 - 2016.0.0.10 - handle null floor.GetAnalyticalModel returned in RAC and RME 
 // 2015-09-15 - 2016.0.0.11 - implemented support for Element bounding box
+// 2015-10-22 - 2016.0.0.12 - readme cleanup
+// 2016-04-04 - 2016.0.0.13 - incremented copyright year from 2015 to 2016
+// 2016-04-15 - 2017.0.0.0 - migration to Revit 2017 Manuel of Sofistik
+// 2016-04-15 - 2017.0.0.1 - microscopic cleanup
+// 2016-04-19 - 2017.0.0.2 - ready for publication
+// 2016-06-04 - 2017.0.0.3 - before merging pull request #13 by awmcc90 to skip mepSys.Elements
+// 2016-06-04 - 2017.0.0.4 - merged pull request #13 by awmcc90 to skip mepSys.Elements for OST_ElectricalInternalCircuits category
+// 2016-06-23 - 2017.0.0.5 - merged pull request #14 by Shayneham to handle exceptions snooping flex pipe and duct lacking levels etc.
+// 2016-08-05 - 2017.0.0.6 - merged pull request #16 by @arif-hanif to add post build event to project file to copy addin manifest and dll to addins folder
+// 2016-12-20 - 2017.0.0.7 - merged pull request #18 by @Andrey-Bushman to use NuGet Revit API package
+// 2016-12-20 - 2017.0.0.8 - added version number to Hello World message box
+// 2017-01-03 - 2017.0.0.9 - incremented copyright year
+// 2017-01-06 - 2017.0.0.10 - merged pull #20 from @luftbanana supporting close-with-ESC to all forms by assigning the cancel button
+// 2017-01-06 - 2017.0.0.11 - fixed issue #19 raised by LeeJaeYoung spot dimension position and text position error
+// 2017-02-02 - 2017.0.0.12 - merged pull #21 from @eibre adding UnitType property on the parameter Definition class
+// 2017-02-02 - 2017.0.0.13 - whitespace
+// 2017-02-06 - 2017.0.0.14 - merged pull request #22 from awmcc90 drastic changes implementing object inspection via reflection and cross-version compatibility
+// 2017-02-06 - 2017.0.0.15 - merged pull request #23 from awmcc90 to catch specific reflection invocation exceptions, not all
+// 2017-02-17 - 2017.0.0.16 - merged pull request #25 from chekalin-v: fix old bugs, significant improvements to the new reflection approach
+// 2017-02-21 - 2017.0.0.17 - merged pull request #26 from Alexander Ignatovich to restore ability to see extensible storage content
+// 2017-03-02 - 2017.0.0.18 - merged pull request #27 from @CADBIMDeveloper to display category BuiltInCategory, nullable double properties and empty lists
+// 2017-03-15 - 2017.0.0.19 - merged pull request #29 from @CADBIMDeveloper fixing bugs initialising type and opening background documents
+// 2017-03-16 - 2017.0.0.20 - merged pull request #30 from @eirannejad adding icon and exception handling
+// 2017-03-17 - 2017.0.0.21 - merged pull request #31 from @CADBIMDeveloper removing try-catch handler
+// 2017-03-17 - 2017.0.0.22 - added 'new' keyword to avoid warning and override inherited methods
+// 2017-03-27 - 2017.0.0.23 - dummy modification to trigger build for https://lookupbuilds.com cf. https://forums.autodesk.com/t5/revit-api-forum/ci-for-revit-lookup/m-p/6947111
+// 2017-04-07 - 2017.0.0.24 - merged pull request #33 by @peterhirn added build status badge
+// 2017-04-21 - 2018.0.0.0 - flat migration to Revit 2018
+// 2017-06-05 - 2018.0.0.1 - merged pull request #34 from @CADBIMDeveloper: annotative family instance geometry, element enumerations instead of ids, parameter names and byte property values
+// 2017-08-28 - 2018.0.0.3 - merged pull request #36 from @Andrey-Bushman: switch target platform to.Net 4.6 and replace Revit 2017 NuGet package by Revit 2018.1 Nuget package
+// 2018-01-05 - 2018.0.0.5 - readme enhancements: badges, installer and updated link to MSI installer
+// 2018-01-05 - 2018.0.0.6 - incremented copyright year to 2018
+// 2018-03-02 - 2018.0.0.7 - merged pull request #41 from @Modis Pekshev: Add ConvertToStableRepresentation method for References
+// 2018-03-12 - 2018.0.0.8 - merged pull request #42 from @Modis Pekshev: Add "Search by and snoop" command
+// 2018-04-15 - 2019.0.0.0 - flat migration to Revit 2019
 //
-[assembly: AssemblyVersion( "2016.0.0.11" )]
-[assembly: AssemblyFileVersion( "2016.0.0.11" )]
+[assembly: AssemblyVersion( "2019.0.0.0" )]
+[assembly: AssemblyFileVersion( "2019.0.0.0" )]
