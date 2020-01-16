@@ -139,7 +139,14 @@ using System.Reflection;
 // 2019-01-21 - 2019.0.0.7 - fixed typo in variable name reported by @yk35 in pull request #47
 // 2019-03-18 - 2019.0.0.8 - cleanup before adding CmdSnoopModScopeDependents
 // 2019-03-18 - 2019.0.0.9 - added CmdSnoopModScopeDependents
-// 2019-03-25 - 2019.0.0.10 - integrated pull requests #48 and #49 by Victor Chekalin
+// 2019-03-25 - 2019.0.0.10 - integrated pull requests #48 and #49 by Victor Chekalin to snoop rendering AssetProperty via Material-AppearanceAssetId-GetRenderingAssset
+// 2019-03-26 - 2019.0.0.11 - integrated pull request #50 by Victor Chekalin to handle DoubleArray4d values
+// 2019-03-27 - 2019.0.0.12 - added MSI installer for 2018.0.0.0 submitted by @VBScab in issue #51
+// 2019-04-18 - 2019.0.0.13 - added MSI installer for Revit 2017-2020 by Harry Mattison
+// 2019-04-18 - 2020.0.0.0 - flat migration to Revit 2020
+// 2019-04-26 - 2020.0.0.1 - integrated pull request #52 by @CADBIMDeveloper
+// 2019-06-03 - 2020.0.0.2 - integrated pull request #53 by @CADBIMDeveloper - list available values for ParameterType.FamilyType and FamilyParameters titles
+// 2019-08-20 - 2020.0.0.3 - integrated pull request #56 by @nonoesp - fix two small typos in readme
 //
-[assembly: AssemblyVersion( "2019.0.0.10" )]
-[assembly: AssemblyFileVersion( "2019.0.0.10" )]
+[assembly: AssemblyVersion( "2020.0.0.3" )]
+[assembly: AssemblyFileVersion( "2020.0.0.3" )]
