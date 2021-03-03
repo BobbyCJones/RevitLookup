@@ -46,15 +46,19 @@ namespace RevitLookup.Snoop.CollectorExts
     {
       try
       {
-        var getEntityValueMehod = GetEntityFieldValueMethod( field );
+        var getEntityValueMethod = GetEntityFieldValueMethod( field );
 
         var valueType = GetFieldValueType( field );
 
-        var genericGet = getEntityValueMehod.MakeGenericMethod( valueType );
+        var genericGet = getEntityValueMethod.MakeGenericMethod( valueType );
 
-        var parameters = getEntityValueMehod.GetParameters().Length == 1
+        //var unit = UnitUtils.GetValidDisplayUnits( field.UnitType ).First(); // 2020
+
+        var unit = UnitUtils.GetValidUnits( field.GetSpecTypeId() ).First(); // 2021
+
+        var parameters = getEntityValueMethod.GetParameters().Length == 1
           ? new object[] { field }
-          : new object[] { field, UnitUtils.GetValidDisplayUnits( field.UnitType ).First() };
+          : new object[] { field, unit };
 
         var value = genericGet.Invoke( entity, parameters );
 
@@ -134,12 +138,26 @@ namespace RevitLookup.Snoop.CollectorExts
       var parameters = methodInfo.GetParameters();
 
       if( field.ContainerType == ContainerType.Simple
-        && ( field.ValueType == typeof( XYZ )
-          || field.ValueType == typeof( double ) ) )
-        return parameters.Length == 2
-          && parameters.First().ParameterType == typeof( Field )
-          && parameters.Last().ParameterType == typeof( DisplayUnitType );
+        && (field.ValueType == typeof( XYZ )
+          || field.ValueType == typeof( double )) )
+      {
+#pragma warning disable CS0618
+        // warning CS0618: `DisplayUnitType` is obsolete: 
+        // This enumeration is deprecated in Revit 2021 and may be removed in a future version of Revit. 
+        // Please use the `ForgeTypeId` class instead. 
+        // Use constant members of the `UnitTypeId` class to replace uses of specific values of this enumeration.
 
+        if( 2 == parameters.Length )
+        {
+          ParameterInfo p1 = parameters.First();
+          ParameterInfo p2 = parameters.Last();
+          return p1.ParameterType == typeof( Field )
+            && (p2.ParameterType == typeof( DisplayUnitType )
+              || p2.ParameterType == typeof( ForgeTypeId ));
+        }
+#pragma warning restore CS0618
+
+      }
       return parameters.Length == 1 && parameters.Single().ParameterType == typeof( Field );
     }
   }

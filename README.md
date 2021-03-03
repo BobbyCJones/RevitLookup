@@ -1,10 +1,10 @@
 # RevitLookup
 
-![Revit API](https://img.shields.io/badge/Revit%20API-2020-blue.svg)
+![Revit API](https://img.shields.io/badge/Revit%20API-2021-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgray.svg)
-![.NET](https://img.shields.io/badge/.NET-4.7-blue.svg)
+![.NET](https://img.shields.io/badge/.NET-4.8-blue.svg)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://opensource.org/licenses/MIT)
-[![Build Status](https://s3-eu-west-1.amazonaws.com/lookup-builds/extra/build_status.svg)](https://lookupbuilds.com)
+[![Build Status](https://gitlab.com/buildinformed-public/revitlookup/badges/master/pipeline.svg)](https://lookupbuilds.com)
 
 Interactive Revit BIM database exploration tool to view and navigate element properties and relationships.
 
@@ -13,11 +13,12 @@ Please refer to [The Building Coder](http://thebuildingcoder.typepad.com) for mo
 
 ## <a name="versions"></a> Versions
 
-The most up-to-date version provided here is for Revit 2020.
+The most up-to-date version provided here is for Revit 2021.
 
 If you are interested in an earlier release of Revit, please grab the latest appropriate one from the
 [release list](https://github.com/jeremytammik/RevitLookup/releases), e.g.:
 
+- [2020.0.0.4](https://github.com/jeremytammik/RevitLookup/releases/tag/2020.0.0.4) for Revit 2020
 - [2019.0.0.13](https://github.com/jeremytammik/RevitLookup/releases/tag/2019.0.0.13) for Revit 2019
 - [2018.0.0.8](https://github.com/jeremytammik/RevitLookup/releases/tag/2018.0.0.8) for Revit 2018
 - [2017.0.0.24](https://github.com/jeremytammik/RevitLookup/releases/tag/2017.0.0.24) for Revit 2017
@@ -27,19 +28,14 @@ If you are interested in an earlier release of Revit, please grab the latest app
 
 ## <a name="builds"></a> Builds
 
-Peter Hirn of [Build Informed GmbH](https://www.buildinformed.com) very kindly set up a
+[Build Informed GmbH](https://www.buildinformed.com) very kindly set up a
 public [CI](https://en.wikipedia.org/wiki/Continuous_integration) for RevitLookup
 at [lookupbuilds.com](https://lookupbuilds.com)
-using [Jenkins](https://jenkins.io/index.html) in
-a multi-branch project configuration to build all branches and tags from the GitHub repository.
+using [gitlab.com](https://gitlab.com).
 The output is dual-signed with the Build Informed certificate, zipped and published to an Amazon S3 bucket.
-For more information, please refer to 
+For more information, please refer to
 the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) thread
 on [CI for RevitLookup](https://forums.autodesk.com/t5/revit-api-forum/ci-for-revit-lookup/m-p/6947111).
-
-Peter also added the build status badge at the top of this page.
-
-Thank you very much, Peter!
 
 
 ## Installation
@@ -80,10 +76,12 @@ Says he:
 
 > I’ve added some conditional compilation and multiple configurations so that the single solution can be used to build against any version of Revit 2017-2020.
 
+[Download the last version of the RevitLookup.](https://github.com/jeremytammik/RevitLookup/raw/master/installer/Revit%20Lookup-SetupFiles/Revit%20Lookup.msi)
+
 <a name="caveat"></a>
 ## Caveat &ndash; RevitLookup Cannot Snoop Everything
 
-This clarification was prompted by 
+This clarification was prompted by
 the [issue #35 &ndash; RevitLookup doesn't snoop all members](https://github.com/jeremytammik/RevitLookup/issues/35):
 
 **Question:** I tried snooping a selected Structural Rebar element in the active view and found not all of the Rebar class members showed up in the Snoop Objects window. One of many members that weren't there: `Rebar.GetFullGeometryForView` method.
@@ -108,7 +106,8 @@ Maintained by Jeremy Tammik,
 [ADN](http://www.autodesk.com/adn)
 [Open](http://www.autodesk.com/adnopen),
 [Autodesk Inc.](http://www.autodesk.com),
-with invaluable contributions from the entire Revit add-in developer community.
+with invaluable [contributions](https://github.com/jeremytammik/RevitLookup/graphs/contributors) from
+the entire Revit add-in developer community.
 
 Thank you, guys!
 
